@@ -1,0 +1,326 @@
+* {
+  margin: 0;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  background-image: url(/assets/images/Music\ Playes\ Bacground\ Image.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.player {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.wrapper {
+  border: 2px solid #fff;
+  padding: 30px;
+  border-radius: 20px;
+  backdrop-filter: blur(5px);
+  max-width: 600px;
+  width: 90%;
+}
+
+.details {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.track-art {
+  margin: 25px;
+  height: 250px;
+  width: 250px;
+  border: 2px solid #fff;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+}
+
+.now-playing {
+  font-size: 1.8rem;
+  color: #fff;
+  text-align: center;
+}
+
+.track-name {
+  font-size: 2rem;
+  color: #fff;
+  text-align: center;
+}
+
+.track-artist {
+  margin-top: 5px;
+  font-size: 1.5rem;
+  color: #fff;
+  text-align: center;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
+
+.active {
+  color: #000;
+}
+
+.repeat-track,
+.next-track,
+.playpause-track,
+.prev-track,
+.random-track {
+  padding: 15px;
+  color: #fff;
+}
+
+.slider_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.seek_slider,
+.volume_slider {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 5px;
+  background: #ff0000;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+
+.seek_slider::-webkit-slider-thumb,
+.volume_slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background: #fff;
+  border: 2px solid #3d0000;
+  cursor: grab;
+  border-radius: 100%;
+}
+
+.seek_slider:hover,
+.volume_slider:hover {
+  opacity: 1;
+}
+
+.seek_slider {
+  width: 60%;
+}
+
+.volume_slider {
+  width: 30%;
+}
+
+.current-time,
+.total-duration {
+  padding: 10px;
+  color: #fff;
+}
+
+i.fa-volume-down,
+i.fa-volume-up {
+  padding: 10px;
+}
+
+i,
+i.fa-play-circle,
+i.fa-pause-circle,
+i.fa-step-forward,
+i.fa-step-backward,
+p {
+  cursor: pointer;
+  color: #fff;
+}
+
+.randomActive {
+  color: #fff;
+}
+
+.rotate {
+  animation: rotation 8s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.loader {
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader .stroke {
+  background: #f1f1f1;
+  height: 150%;
+  width: 10px;
+  border-radius: 50px;
+  margin: 0 5px;
+  animation: animate 1.4s linear infinite;
+}
+
+@keyframes animate {
+  50% {
+    height: 20%;
+    background-color: #950101;
+  }
+
+  100% {
+    height: 100%;
+    background: #ff0000;
+  }
+}
+
+.stroke:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.stroke:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.stroke:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.stroke:nth-child(4) {
+  animation-delay: 0.9s;
+}
+
+.stroke:nth-child(5) {
+  animation-delay: 0.6s;
+}
+
+.stroke:nth-child(6) {
+  animation-delay: 0.3s;
+}
+
+.stroke:nth-child(7) {
+  animation-delay: 0s;
+}
+
+/* Media Queries for responsiveness */
+
+/* Large screens */
+@media only screen and (max-width: 1200px) {
+  .track-art {
+    height: 200px;
+    width: 200px;
+  }
+
+  .track-name {
+    font-size: 2rem;
+  }
+
+  .track-artist {
+    font-size: 1.2rem;
+  }
+
+  .playpause-track i {
+    font-size: 4rem;
+  }
+}
+
+/* Tablets */
+@media only screen and (max-width: 768px) {
+  .wrapper {
+    padding: 20px;
+    max-width: 90%;
+  }
+
+  .track-art {
+    height: 180px;
+    width: 180px;
+  }
+
+  .track-name {
+    font-size: 1.8rem;
+  }
+
+  .track-artist {
+    font-size: 1.2rem;
+  }
+
+  .playpause-track i {
+    font-size: 3.5rem;
+  }
+
+  .seek_slider {
+    width: 80%;
+  }
+
+  .volume_slider {
+    width: 40%;
+  }
+}
+
+/* Mobile phones */
+@media only screen and (max-width: 480px) {
+  .wrapper {
+    padding: 15px;
+    max-width: 95%;
+  }
+
+  .track-art {
+    height: 150px;
+    width: 150px;
+  }
+
+  .track-name {
+    font-size: 1.5rem;
+  }
+
+  .track-artist {
+    font-size: 1rem;
+  }
+
+  .playpause-track i {
+    font-size: 3rem;
+  }
+
+  .seek_slider {
+    width: 90%;
+  }
+
+  .volume_slider {
+    width: 50%;
+  }
+
+  .buttons {
+    flex-direction: row;
+    margin-bottom: 20px;
+  }
+
+  .random-track,
+  .prev-track,
+  .next-track,
+  .repeat-track {
+    padding: 10px;
+  }
+}

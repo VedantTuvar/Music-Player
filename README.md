@@ -13,7 +13,7 @@ Welcome to the **Music Player** project ! This simple and intuitive music player
 - **Timeline Control**: Set the music playback position using the timeline.
 
 ## How to Use
-Clone the repository:
+1. Clone the repository:
 ```bash
 https://github.com/your-username/music-player.git
 ```

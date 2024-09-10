@@ -15,7 +15,7 @@ Welcome to the **Music Player** project ! This simple and intuitive music player
 ## How to Use
 1. Clone the repository:
 ```bash
-https://github.com/your-username/music-player.git
+(https://github.com/VedantTuvar/Music-Player.git)
 ```
 2. Navigate to the project directory and open the index.html file in your browser.
 
